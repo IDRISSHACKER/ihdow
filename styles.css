@@ -1,3 +1,28 @@
-/* styles.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-/* Add styles here to customize the appearance of your app */
+html {
+  background: #f0f1f3f5;
+  font-family: "Poppins";
+  -webkit-app-region: drag;
+}
+
+main {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.hello {
+  background: #fff;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

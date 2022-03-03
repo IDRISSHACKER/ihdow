@@ -4,3 +4,5 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+const h1 = document.querySelector("h1")
+h1.textContent = "IDRISS HACKER"
