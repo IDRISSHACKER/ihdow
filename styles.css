@@ -8,21 +8,154 @@ html {
   background: #f0f1f3f5;
   font-family: "Poppins";
   -webkit-app-region: drag;
-}
-
-main {
-  max-width: 1300px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+  user-select: none;
+  overflow: hidden;
 }
 
 .hello {
   background: #fff;
   font-size: 2rem;
   border-radius: 1rem;
+}
+
+.games {
+  margin-top: 100px;
+  display: flex;
+  gap: 40px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.games .game {
+  transition: all linear 400ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.games .game .gameImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.games .game .gameImg .img {
+  height: 300px !important;
+  width: 300px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+.games .game .gameDesc {
+  display: none;
+}
+.games .game .gameTitle {
+  transition: all linear 400ms;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #00c1cf;
+  display: none;
+  margin-bottom: 1rem;
+}
+.games .gameActive {
+  transform: scale(1.1);
+}
+.games .gameActive .gameTitle {
+  display: block;
+  position: relative;
+}
+.games .gameActive .gameTitle::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 60px;
+  background: #00c1cf;
+  position: absolute;
+  left: -60px;
+  top: -5px;
+}
+.games .gameActive .gameTitle::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: none;
+  position: absolute;
+  left: -44px;
+  bottom: 3px;
+  border: solid 7px #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(40deg);
+}
+.games .gameActive .gameImg {
+  border: solid 5px #00c1cf;
+  padding: 0.5rem;
+}
+.games .gameActive .gameImg::before {
+  content: "";
+  height: 316px;
+  width: 316px;
+  position: absolute;
+  border: solid 4px #00a9b6;
+  transition: all linear 0.3s;
+  animation: pulseOut 2s linear infinite;
+}
+
+@keyframes pulseOut {
+  25% {
+    opacity: 0.3;
+    transform: scale(1);
+    transition: all linear 0.3s;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+    transition: all linear 0.3s;
+  }
+}
+.actions {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: solid 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  gap: 40px;
+}
+
+.menus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 30px;
+}
+.menus .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all linear 300ms;
+}
+.menus .menu .menuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px -4px, rgba(0, 0, 0, 0.01) 4px 2px 3px 0px, rgba(0, 0, 0, 0.05) 4px 2px 4px -8px;
+}
+.menus .menu .menuIcon img {
+  width: 60px;
+  height: 60px;
+}
+.menus .menuActive .menuIcon {
+  background: #96064f !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

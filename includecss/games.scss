@@ -1,0 +1,108 @@
+$primary : rgb(0, 193, 207);
+$gameSize: 300px;
+
+.games{
+    margin-top: 100px;
+    display: flex;
+    gap: 40px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    .game{
+        transition: all linear 400ms;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .gameImg{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .img{
+                height: $gameSize !important;
+                width: $gameSize;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+                background-position: center !important;
+            }
+        }
+        .gameDesc{
+            display: none;
+        }
+
+        .gameTitle{
+            transition: all linear 400ms;
+            font-weight: 500;
+            font-size: 2rem;
+            color: $primary;
+            display: none;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .gameActive{
+        transform: scale(1.1);
+        .gameTitle{
+            display: block;
+            position: relative;
+            &::before{
+                content: "";
+                display: block;
+                width: 50px;
+                height: 60px;
+                background: $primary;
+                position: absolute;
+                left: -60px;
+                top: -5px;
+            }
+
+            &::after{
+                content: "";
+                display: block;
+                width: 4px;
+                height: 4px;
+                background:none;
+                position: absolute;
+                left: -44px;
+                bottom: 3px;
+                border: solid 7px #fff;
+                border-top: none;
+                border-left: none;
+                transform: rotate(40deg);
+            }
+        }
+        .gameImg{
+            border: solid 5px $primary;
+            padding: .5rem;
+            &::before{
+                content: "";
+                height: calc($gameSize + 16px);
+                width: calc($gameSize + 16px);
+                position: absolute;
+                border: solid 4px darken($primary, 5);
+                transition: all linear .3s;
+                animation: pulseOut 2s linear infinite;
+            }
+        }
+
+    }
+}
+
+@keyframes pulseOut {
+    25% {
+        opacity: .3;
+        transform: scale(1);
+        transition: all linear .3s;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+        transition: all linear .3s;
+    }
+}

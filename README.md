@@ -39,3 +39,13 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 ## License
 
 [CC0 1.0 (Public Domain)](LICENSE.md)
+
+## SELECTION MODE
+
+[x] Recuperer l'element selectionner
+[x] Recuperer tous les elements
+[x] Retirer l'element selectionner du tableau
+[x] Ajouter l'element recuperer à la postion ideal
+[x] Deplacer le premier element et le mettre à la fin pour creer l'effet de deplacement
+[] Deplacer le dernier element pour le mettre au debut pour creer l'effet de reculement
+[x] Rerendre tous le tabeau

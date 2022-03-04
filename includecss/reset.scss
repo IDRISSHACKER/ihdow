@@ -7,14 +7,10 @@
 html{
     background: #f0f1f3f5;
     font-family: "Poppins";
-    -webkit-app-region: drag
+    -webkit-app-region: drag;
+    user-select: none;
+    overflow: hidden;
 }
 
 main{
-    max-width: 1300px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
 }
