@@ -26,12 +26,28 @@ $secondary: rgb(224, 9, 117);
                 width: 60px;
                 height: 60px;
             }
+
+            .primaryIcon{
+                display: none;
+            }
+
+            .secondaryIcon{
+                display: block;
+            }
         }
     }
 
     .menuActive{
         .menuIcon{
             background: darken($color: $secondary, $amount: 15) !important;
+            .primaryIcon{
+                display: block !important;
+            }
+
+            .secondaryIcon{
+                display: none !important;
+            }
         }
+
     }
 }

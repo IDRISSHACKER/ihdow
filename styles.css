@@ -154,8 +154,20 @@ html {
   width: 60px;
   height: 60px;
 }
+.menus .menu .menuIcon .primaryIcon {
+  display: none;
+}
+.menus .menu .menuIcon .secondaryIcon {
+  display: block;
+}
 .menus .menuActive .menuIcon {
   background: #96064f !important;
+}
+.menus .menuActive .menuIcon .primaryIcon {
+  display: block !important;
+}
+.menus .menuActive .menuIcon .secondaryIcon {
+  display: none !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
